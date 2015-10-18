@@ -28,7 +28,9 @@ var firstState = states.create('first');
 var secondState = states.create('second');
 
 secondState.to('dead');
-console.log(secondState.age); // > 0;
+
+// a state is a function, when called returns the current state data
+console.log(secondState().age); // ~0;
 
 setTimeout(function () {
   // add additional state data
@@ -36,7 +38,7 @@ setTimeout(function () {
     message: 'Time to go.'
   });
 
-  console.log(firstState.age, firstState.message); // > ~100 "Time to go."
+  console.log(firstState().age, firstState().message); // > ~100 "Time to go."
 }, 100);
 
 // get state by key

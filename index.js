@@ -14,6 +14,10 @@ function States(transitions, initialState) {
     };
 
     fn.to = function (name, data) {
+      if (currentName === name) {
+        return;
+      }
+
       var next = current.merge(data || {}, { time: new Date() });
       var duration = next.get('time').getTime() - current.get('time').getTime();
 

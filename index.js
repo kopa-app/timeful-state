@@ -35,6 +35,30 @@ function States(transitions, initialState) {
       currentName = name;
     }
 
+    fn.set = function (name, value) {
+      if (typeof name === 'string' && name === 'time') {
+        return;
+      }
+
+      // set single property
+      if (typeof name === 'string') {
+        current = current.set(name, value);
+      } else if (typeof name === 'object') {
+        // multiple properties
+        var data = {};
+
+        Object.keys(name).forEach(function (key) {
+          if (key === 'time') {
+            return;
+          }
+
+          data[key] = name[key];
+        });
+
+        current = current.merge(data);
+      }
+    };
+
     if (initialState) {
       fn.to(initialState);
     }

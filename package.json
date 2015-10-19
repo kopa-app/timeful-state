@@ -1,6 +1,6 @@
 {
   "name": "timeful-state",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "immutable states with timestamps",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,6 @@
     "mocha": "^2.3.3"
   },
   "dependencies": {
-    "easing-js": "^1.0.1",
     "immutable": "^3.7.5"
   }
 }

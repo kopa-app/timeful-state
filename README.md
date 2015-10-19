@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kopa-app/timeful-state.svg)](https://travis-ci.org/kopa-app/timeful-state)
+
 # Timeful States
 
 Immutable states with timestamps.

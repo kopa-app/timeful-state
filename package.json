@@ -1,6 +1,6 @@
 {
   "name": "timeful-state",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "immutable states with timestamps",
   "main": "index.js",
   "scripts": {

@@ -188,4 +188,13 @@ describe('States', function () {
     expect(first().foo).to.be('foo');
     expect(first().bar).to.be('bar');
   });
+
+  it('should clear all states', function () {
+    var states = States({});
+    states.create('first');
+    states.create('second');
+    states.clear();
+    expect(states.get('first')).to.be(null);
+    expect(states.get('second')).to.be(null);
+  });
 });

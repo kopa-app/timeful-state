@@ -66,15 +66,21 @@ function States(transitions, initialState) {
     return fn;
   }
 
-  return {
+  var factory = {
     create: function (key, data) {
       var state = states[key] = State(data);
       return state;
     },
     get: function (key) {
       return states[key] || null;
+    },
+    clear: function () {
+      states = {};
+      return factory;
     }
   };
+
+  return factory;
 }
 
 module.exports = States;

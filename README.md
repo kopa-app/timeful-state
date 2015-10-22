@@ -49,4 +49,7 @@ console.log(states.get('first')().age); // > 0
 // set internal state value
 firstState.set('foo', 'bar');
 firstState.set({ foo: 'foo', bar: 'bar' });
+
+// clear all stored states
+states.clear();
 ```

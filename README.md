@@ -50,6 +50,9 @@ console.log(states.get('first')().age); // > 0
 firstState.set('foo', 'bar');
 firstState.set({ foo: 'foo', bar: 'bar' });
 
+// get state name
+state.name();
+
 // clear all stored states
 states.clear();
 ```

@@ -59,6 +59,10 @@ function States(transitions, initialState) {
       }
     };
 
+    fn.name = function () {
+      return currentName;
+    };
+
     if (initialState) {
       fn.to(initialState);
     }

@@ -51,7 +51,7 @@ firstState.set('foo', 'bar');
 firstState.set({ foo: 'foo', bar: 'bar' });
 
 // get state name
-state.name();
+state.getName();
 
 // clear all stored states
 states.clear();

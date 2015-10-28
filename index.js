@@ -59,7 +59,7 @@ function States(transitions, initialState) {
       }
     };
 
-    fn.name = function () {
+    fn.getName = function () {
       return currentName;
     };
 

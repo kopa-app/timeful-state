@@ -10,7 +10,7 @@ function States(transitions, initialState) {
     var current = iMap(data || {}).merge({ time: new Date() });
 
     function fn() {
-      return current.toObject();
+      return current.toJS();
     };
 
     fn.to = function (name, data) {
